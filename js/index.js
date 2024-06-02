@@ -26,7 +26,7 @@ myApp.run(function ($rootScope, $http) {
 
   $http({
     method: 'GET',
-    url: 'https://raw.githubusercontent.com/chhotboy000/front-end/main/js/index.js'
+    url: 'https://raw.githubusercontent.com/chhotboy000/front-end/main/data/data.json'
   }).then(function successCallback(response) {
     // Xử lý phản hồi thành công từ server
     $rootScope.data = response.data.details;
@@ -127,7 +127,7 @@ myApp.controller("shopCtrl", function ($scope, $http, myService) {
   // get data from filr json
   $http({
     method: 'GET',
-    url: 'https://raw.githubusercontent.com/chhotboy000/front-end/main/js/index.js'
+    url: 'https://raw.githubusercontent.com/chhotboy000/front-end/main/data/data.json'
   }).then(function successCallback(response) {
     // Xử lý phản hồi thành công từ server
     $scope.listProduct = response.data.details;
