@@ -26,7 +26,7 @@ myApp.run(function ($rootScope, $http) {
 
   $http({
     method: 'GET',
-    url: 'http://127.0.0.1:5502/project-cakeShop/data/data.json'
+    url: 'https://chhotboy000.github.io/front-end/data/data.json'
   }).then(function successCallback(response) {
     // Xử lý phản hồi thành công từ server
     $rootScope.data = response.data.details;
@@ -127,7 +127,7 @@ myApp.controller("shopCtrl", function ($scope, $http, myService) {
   // get data from filr json
   $http({
     method: 'GET',
-    url: 'http://127.0.0.1:5501//Front_end/data/data.json'
+    url: 'https://chhotboy000.github.io/front-end/data/data.json'
   }).then(function successCallback(response) {
     // Xử lý phản hồi thành công từ server
     $scope.listProduct = response.data.details;
