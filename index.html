@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cake Shop</title>
+    <!-- link bootrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://unpkg.com/@jsweb/font-awesome-base64/fa-all.css" />
+    <!-- link css -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+    <!--   script  jquery  -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- script angular -->
+    <script type="application/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <!-- script bootrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script data-require="angular-ui-bootstrap@0.3.0" data-semver="0.3.0"
+        src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.3.0.min.js">
+        </script>
+    <!-- absolute -->
+
+</head>
+
+<body ng-app="myApp">
+    <!-- header nav -->
+    <div ng-controller="navCtrl">
+
+        <header class="header">
+            <div class="container">
+
+                <nav class="nav">
+                    <div class="nav-btn l-hiden" ng-click="showNavbar()">
+                        <i class="fa-solid fa-bars"></i>
+
+                    </div>
+                    <div class="nav-log">
+                        <i class="fa-solid fa-basket-shopping mg-t12"></i>
+                        <h1 class="head-log"> Cake</h1>
+                    </div>
+
+                    <div class="nav-body s-hiden">
+
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="#!" class="nav-link">Home</a></li>
+
+                            <li class="nav-item"><a href="#!shop" class="nav-link">Shop</a></li>
+
+                            <li class="nav-item"><a href="
+                                #!about" class="nav-link">About</a></li>
+
+                            <li class="nav-item"><a href="" class="nav-link">Review</a></li>
+
+                            <li class="nav-item"><a href="#!blog" class="nav-link">Blog</a></li>
+
+                            <li class="nav-item"><a href="#!contact" class="nav-link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-info s-hiden">
+                        <ul class="info-list">
+                            <li class="info-item"><a href="" class="info-link"><i
+                                        class="fa-solid fa-magnifying-glass"></i></a>
+                            </li>
+                            <li class="info-item"><a href="" class="info-link"><i
+                                        class="fa-solid fa-cart-shopping"></i></a>
+                            </li>
+                            <li class="info-item"><a href="" class="info-link"><i class="fa-solid fa-user"></i></a></li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+        </header>
+    </div>
+    
+
+
+    <div ng-view>
+
+    </div>
+    <!--footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="box-container">
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i>Shop</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i>About</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i>Review</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i>Blog</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i>Contact</a>
+                </div>
+
+                <div class="box">
+                    <h3>extra links</h3>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> my order </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> my favorite </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> my wishlist </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> my account </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> terms or use </a>
+                </div>
+
+                <div class="box">
+                    <h3>follow us</h3>
+                    <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                    <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                    <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                    <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+                    <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
+                </div>
+
+                <div class="box">
+                    <h3>newsletter</h3>
+                    <p>subscribe for latest update</p>
+                    <form action="">
+                        <input type="email" placeholder="enter your email address">
+                        <input type="submit" value="subscribe" class="btn">
+                    </form>
+                    <img decoding="async" src="./images/payment.png" class="payments" alt="">
+                </div>
+                
+            </div>
+        </div>
+        <button class="blog-totop">Scroll To Top</button>
+    </footer>
+</body>
+<script src="./js/index.js"></script>
+
+</html>

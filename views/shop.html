@@ -1,0 +1,139 @@
+<div class="container-shop" ng-controller="shopCtrl">
+    <div class="bg-shop"></div>
+    <div class="container max-width ">
+        <div class="container-shop__conten">
+            <div class=" s-hiden  wd-for l-show">
+
+                <div class=" box-siderbar">
+                    <div class="container-sidebar">
+
+                        <div class="search">
+                            <div class="nav-btn l-hiden" ng-click="showNavbar()">
+                                <i class="fa-solid fa-bars"></i>
+        
+                            </div>
+                            <div class="nav-log">
+                                <i class="fa-solid fa-basket-shopping mg-t12"></i>
+                                <h1 class="head-log"> Cake</h1>
+                            </div>
+                            <ul class="list-search">
+                                <li class="product-item__type item-search"><span class="span-title"> Product</span>
+                                    <a class="product-link__type" data-set="all" ng-model="type"
+                                        ng-click="orderfil()">All
+                                        Product</a>
+                                </li>
+                                <li class="item-search"><span class="span-title"> Price product</span>
+                                    <input type="range" min="0" max="100" oninput="rangevalue.value=value +'$'" />
+                                    <output id="rangevalue">50$</output>
+                                </li>
+                                <li class="item-search ">
+                                    <span class="span-title">Type product</span>
+                                    <ul class="product-list__type">
+                                        <li class="product-item__type">
+                                            <a class="product-link__type" data-set="birthday" ng-model="type"
+                                                ng-click="getType('birthday')" value="birthday">Birthday</a>
+                                        </li>
+                                        <li class="product-item__type"><a class="product-link__type" data-set="Marriage"
+                                                ng-click="getType('Marriage')" ng-model="type">Marriagey</a>
+                                        </li>
+                                        <li class="product-item__type"><a class="product-link__type"
+                                                data-set="Anniversary" ng-click="getType('Anniversary')"
+                                                ng-model="type">Anniversary</a>
+                                        </li>
+                                        <li class="product-item__type"><a class="product-link__type" data-set="gallsery"
+                                                ng-click="getType('gallsery')" ng-model="type">Gallsery</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="item-search">
+                                    <span class="span-title">Name product</span>
+                                    <input type="text" placeholder="search name product" ng-model="name"
+                                        class="search-name">
+                                </li>
+                                <li class=" item-search">
+                                    <span class="span-title">Egg</span>
+                                    <ul class="product-list__type">
+                                        <li class="product-item__type"><a href="" class="product-link__type"
+                                                ng-model="egg" ng-click="orderfilEgg('with Egg')"
+                                                data-set="with Egg">With Egg</a>
+                                        </li>
+                                        <li class="product-item__type"><a href="" class="product-link__type"
+                                                ng-model="egg" ng-click="orderfilEgg('no')" data-set="no">Have Egg </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <div class="box-touch">
+                                <form name="touch">
+                                    <h3>Get in Touch</h3>
+                                    <div class="info">
+                                        <input type="text" class="info-name wd-full" placeholder="Enter your name" />
+                                        <input type="email" class="info-email wd-full" placeholder="Enter your email" />
+                                    </div>
+                                    <div class="info">
+
+                                        <input type="text" class="info-number wd-full "
+                                            placeholder="Enter your number" />
+
+
+                                        <input type="text" class="info-subject  wd-full"
+                                            placeholder="Enter your  subject" />
+
+                                    </div>
+                                    <div class="info">
+                                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                                    </div>
+                                    <a type="submit" class="btn wd-full">Send message</a>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="shop-card wd-76 s-full-width">
+                <div class="product-content">
+
+                    <div class=" box-product wd-thir  s-col-full" ng-repeat=" item in listProduct | 
+                   filter:{'type':type||filter}| filter:{'egg':egg} |filter:{'name':name}|  limitTo : pageSize">
+                        <div class=" product-icon ">
+                            <div class="box-icon">
+                                <a href="" class="icon-link"> <i class="fa-solid fa-heart "></i></a>
+                                <a href="" class="icon-link"> <i class="fa-solid fa-cart-shopping "></i></a>
+                                <a href="#!detail" class="icon-link" ng-click="saveData(item)"> <i
+                                        class="fa-solid fa-eye "></i></a>
+                            </div>
+                        </div>
+                        <ol class="box-list">
+                            <li class="box-item"> <img src={{item.image}} alt="">
+                            </li>
+                            <li class="box-item">
+                                <h3>{{item.name}}</h3>
+                            </li>
+                            <li class="box-item">
+                                <span>{{item.type}}</span>
+                            </li>
+
+                            <li class="box-item"><span>$ {{item.price}}</span></li>
+                            <li class="box-item">
+                                <ul class="list-icon">
+                                    <li class="item-icon"><i class="fa-solid fa-star"></i></li>
+                                    <li class="item-icon"><i class="fa-solid fa-star"></i></li>
+                                    <li class="item-icon"><i class="fa-solid fa-star"></i></li>
+                                    <li class="item-icon"><i class="fa-solid fa-star"></i></li>
+                                    <li class="item-icon"><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="pagebar" class="numberbar">
+
+        </div>
+
+    </div>
